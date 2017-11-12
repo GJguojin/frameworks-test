@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>登录页面</title>
+</head>
+<body>
+	<form action="./test.html" th:action="@{/login}" th:method="post" method="post" >
+		<table>
+			<tr>
+				<td>用户名</td>
+				<td><input  type="text" name="userName" /></td>
+			</tr>
+			<tr>
+				<td>密 码</td>
+				<td><input  type="password" name="password" /></td>
+			</tr>
+			<tr>
+				<td>验证码</td>
+				<td><input style="width:70px;" type="text" name="captcha" /><img style="vertical-align:middle;" src="/login/genCaptcha"/></td>
+			    <td></td>
+			</tr>			
+			<tr>
+				<td colspan="2"><input type="submit" value="登录" /></td>
+			</tr>
+			<tr>
+				<td colspan="2" th:text="${message}"></td>
+			</tr>
+		</table>
+	</form> 
+</body>
+</html>
